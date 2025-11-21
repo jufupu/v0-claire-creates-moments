@@ -10,48 +10,35 @@ import { Card } from "@/components/ui/card"
 import { Mail, Phone } from "lucide-react"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
     try {
+      const formData = new FormData(e.currentTarget)
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "")
+      formData.append("subject", "New Wedding Enquiry from Claire Creates Moments")
+      formData.append("from_name", "Claire Creates Moments Website")
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          subject: "New Wedding Enquiry from Claire Creates Moments",
-          from_name: "Claire Creates Moments Website",
-        }),
+        body: formData,
       })
 
-      const result = await response.json()
+      const data = await response.json()
 
-      if (result.success) {
+      if (data.success) {
         setSubmitted(true)
-        setFormData({ name: "", email: "", phone: "", message: "" })
+        e.currentTarget.reset()
 
         setTimeout(() => {
           setSubmitted(false)
         }, 5000)
       } else {
-        throw new Error("Form submission failed")
+        throw new Error(data.message || "Form submission failed")
       }
     } catch (error) {
       console.error("Error submitting form:", error)
@@ -104,9 +91,9 @@ export function Contact() {
                   </label>
                   <Input
                     id="name"
+                    name="name"
+                    type="text"
                     required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="bg-black border-[#D6B85A]/30 text-white focus:border-[#B76E8E]"
                     placeholder="Your name"
                   />
@@ -118,10 +105,9 @@ export function Contact() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-black border-[#D6B85A]/30 text-white focus:border-[#B76E8E]"
                     placeholder="your.email@example.com"
                   />
@@ -133,10 +119,9 @@ export function Contact() {
                   </label>
                   <Input
                     id="phone"
+                    name="phone"
                     type="tel"
                     required
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="bg-black border-[#D6B85A]/30 text-white focus:border-[#B76E8E]"
                     placeholder="Your phone number"
                   />
@@ -148,9 +133,8 @@ export function Contact() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-black border-[#D6B85A]/30 text-white focus:border-[#B76E8E] min-h-[150px]"
                     placeholder="Tell us about your special day..."
                   />
