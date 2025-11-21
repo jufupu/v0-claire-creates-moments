@@ -41,3 +41,8 @@ externalPort = 3000
 deploymentTarget = "autoscale"
 run = ["pnpm", "run", "start"]
 build = ["pnpm", "run", "build"]
+
+[userenv]
+
+[userenv.shared]
+NEXT_PUBLIC_WEB3FORMS_KEY = "59f5f8f7-42ff-4206-a526-5594ccc105da"

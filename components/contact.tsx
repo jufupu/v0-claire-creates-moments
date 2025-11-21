@@ -23,18 +23,42 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          subject: "New Wedding Enquiry from Claire Creates Moments",
+          from_name: "Claire Creates Moments Website",
+        }),
+      })
 
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setIsSubmitting(false)
+      const result = await response.json()
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: "", email: "", phone: "", message: "" })
-    }, 3000)
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({ name: "", email: "", phone: "", message: "" })
+
+        setTimeout(() => {
+          setSubmitted(false)
+        }, 5000)
+      } else {
+        throw new Error("Form submission failed")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("There was an error sending your message. Please try again or email us directly at info@ccmoments.co.uk")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
