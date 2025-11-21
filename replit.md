@@ -10,8 +10,15 @@ A Next.js 14 wedding celebrant website featuring a modern, elegant design with d
 - **Styling**: Tailwind CSS v4 with custom animations
 - **Theme**: Dark/Light theme support via next-themes
 
-## Recent Changes (October 29, 2025)
-### Vercel to Replit Migration
+## Recent Changes
+
+### November 21, 2025 - Contact Form Integration
+- Integrated Web3Forms for contact form submissions
+- Form now sends emails to tmona64@gmail.com
+- Added proper error handling and success messages
+- Configured environment variable for Web3Forms access key
+
+### October 29, 2025 - Vercel to Replit Migration
 Successfully migrated the project from Vercel to Replit with the following changes:
 - Updated `package.json` scripts to bind to `0.0.0.0:5000` for Replit compatibility
 - Configured Next.js Dev Server workflow to run on port 5000
@@ -48,5 +55,14 @@ Successfully migrated the project from Vercel to Replit with the following chang
 - Start command: `pnpm run start`
 - Port: 5000 (bound to 0.0.0.0 for Replit compatibility)
 
-## Environment
-No environment variables currently required for the application.
+## Environment Variables
+- `NEXT_PUBLIC_WEB3FORMS_KEY` - Access key for Web3Forms contact form service (sends to tmona64@gmail.com)
+
+## Contact Form
+- **Service**: Web3Forms (free tier with unlimited submissions)
+- **Destination Email**: tmona64@gmail.com
+- **Features**: 
+  - Real-time form validation
+  - Success/error notifications
+  - Custom email subject line: "New Wedding Enquiry from Claire Creates Moments"
+  - Collects: Name, Email, Phone, Message
