@@ -14,8 +14,12 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#D6B85A] leading-tight text-balance break-words">
-            Claire Creates Moments
+          <h1 className="flex justify-center items-center">
+            <img 
+              src="/logo.png" 
+              alt="Claire Creates Moments - Wedding Celebrant" 
+              className="w-[300px] md:w-[400px] lg:w-[500px] h-auto"
+            />
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed text-pretty font-light italic">

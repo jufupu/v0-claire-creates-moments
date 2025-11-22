@@ -3,7 +3,11 @@ export function Footer() {
     <footer className="bg-black border-t border-[#D6B85A]/20 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h3 className="font-serif text-4xl text-[#D6B85A]">Claire Creates Moments</h3>
+          <img 
+            src="/logo.png" 
+            alt="Claire Creates Moments" 
+            className="w-[200px] md:w-[250px] h-auto mx-auto"
+          />
 
           <p className="text-white/70 text-base italic max-w-2xl mx-auto">
             Where every moment becomes a memory, creating timeless ceremonies that reflect your story
