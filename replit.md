@@ -18,7 +18,8 @@ A Next.js 14 wedding celebrant website featuring a modern, elegant design with d
 - 250 free submissions per month (vs Web3Forms domain blocking)
 - Emails sent to: tmona64@gmail.com
 - Subject line: "New Wedding Enquiry from Claire Creates Moments"
-- No React state management - pure HTML form with elegant styling
+- Client-side form submission using JavaScript fetch (stays on page)
+- Beautiful success message displayed after submission
 - All submissions viewable in Formspark dashboard
 
 ### October 29, 2025 - Vercel to Replit Migration
