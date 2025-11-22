@@ -23,12 +23,15 @@ export function Contact() {
       formData.append("subject", "New Wedding Enquiry from Claire Creates Moments")
       formData.append("from_name", "Claire Creates Moments Website")
 
+      console.log("Submitting form to Web3Forms...")
+      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       })
 
       const data = await response.json()
+      console.log("Web3Forms response:", data)
 
       if (data.success) {
         setSubmitted(true)
