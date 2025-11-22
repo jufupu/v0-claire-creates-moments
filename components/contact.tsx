@@ -27,10 +27,9 @@ export function Contact() {
           </div>
 
           <Card className="bg-[#1C1C1C] border-[#D6B85A]/20 p-8 md:p-12">
-            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
-              <input type="hidden" name="access_key" value="59f5f8f7-42ff-4206-a526-5594ccc105da" />
-              <input type="hidden" name="subject" value="New Wedding Enquiry from Claire Creates Moments" />
-              <input type="hidden" name="from_name" value="Claire Creates Moments Website" />
+            <form action="https://submit-form.com/TRUjK7Mrq" method="POST" className="space-y-6">
+              <input type="hidden" name="_email.subject" value="New Wedding Enquiry from Claire Creates Moments" />
+              <input type="hidden" name="_email.from" value="Claire Creates Moments Website" />
 
               <div>
                 <label htmlFor="name" className="block text-[#D6B85A] mb-2 text-sm font-medium">

@@ -12,13 +12,14 @@ A Next.js 14 wedding celebrant website featuring a modern, elegant design with d
 
 ## Recent Changes
 
-### November 22, 2025 - Simplified Contact Form
-- Simplified contact form to use basic HTML POST directly to Web3Forms API
-- Form submits to: https://api.web3forms.com/submit
-- Access key embedded in form as hidden input field
+### November 22, 2025 - Formspark Contact Form Integration
+- Switched from Web3Forms to Formspark (works with .replit.dev domains)
+- Form submits to: https://submit-form.com/TRUjK7Mrq
+- 250 free submissions per month (vs Web3Forms domain blocking)
 - Emails sent to: tmona64@gmail.com
 - Subject line: "New Wedding Enquiry from Claire Creates Moments"
 - No React state management - pure HTML form with elegant styling
+- All submissions viewable in Formspark dashboard
 
 ### October 29, 2025 - Vercel to Replit Migration
 Successfully migrated the project from Vercel to Replit with the following changes:
@@ -61,10 +62,13 @@ Successfully migrated the project from Vercel to Replit with the following chang
 - None required (Web3Forms access key is embedded in the contact form)
 
 ## Contact Form
-- **Service**: Web3Forms (free tier with unlimited submissions)
+- **Service**: Formspark (free tier with 250 submissions/month)
+- **Form ID**: TRUjK7Mrq
 - **Destination Email**: tmona64@gmail.com
+- **Dashboard**: https://formspark.io/
 - **Features**: 
-  - Real-time form validation
-  - Success/error notifications
+  - Spam filtering (built-in)
   - Custom email subject line: "New Wedding Enquiry from Claire Creates Moments"
+  - Submission archive and CSV export
+  - Works with .replit.dev domains
   - Collects: Name, Email, Phone, Message
