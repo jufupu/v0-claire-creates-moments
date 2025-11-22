@@ -18,7 +18,7 @@ export function Hero() {
             <img 
               src="/logo.png" 
               alt="Claire Creates Moments - Wedding Celebrant" 
-              className="w-[300px] md:w-[400px] lg:w-[500px] h-auto"
+              className="w-[300px] md:w-[350px] lg:w-[450px] h-auto"
             />
           </h1>
 

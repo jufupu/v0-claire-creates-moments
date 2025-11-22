@@ -6,7 +6,7 @@ export function Footer() {
           <img 
             src="/logo.png" 
             alt="Claire Creates Moments" 
-            className="w-[200px] md:w-[250px] h-auto mx-auto"
+            className="w-[280px] md:w-[300px] h-auto mx-auto"
           />
 
           <p className="text-white/70 text-base italic max-w-2xl mx-auto">
