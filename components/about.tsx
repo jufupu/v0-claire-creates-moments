@@ -14,18 +14,16 @@ export function About() {
           </h2>
 
           <div className="space-y-8">
-            <div className="rounded-lg overflow-hidden border-2 border-[#D6B85A]/30 bg-gradient-to-br from-[#FFB3C6]/15 to-[#FFD1DC]/15 p-2">
-              <div className="relative aspect-video bg-black rounded overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/1139631322?badge=0&autopause=0&player_id=0&app_id=58479"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                  allowFullScreen
-                  loading="lazy"
-                  title="Claire Creates Moments - Introduction"
-                ></iframe>
-              </div>
+            <div className="relative aspect-video bg-black rounded-lg overflow-hidden border-2 border-[#FFB3C6]/40 shadow-lg shadow-[#FFB3C6]/20">
+              <iframe
+                src="https://player.vimeo.com/video/1139631322?badge=0&autopause=0&player_id=0&app_id=58479"
+                className="absolute inset-0 w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                allowFullScreen
+                loading="lazy"
+                title="Claire Creates Moments - Introduction"
+              ></iframe>
             </div>
 
             <div className="space-y-6 text-white/80 text-lg leading-relaxed">
