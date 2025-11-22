@@ -28,6 +28,7 @@ export function Contact() {
 
           <Card className="bg-[#1C1C1C] border-[#D6B85A]/20 p-8 md:p-12">
             <form action="https://submit-form.com/TRUjK7Mrq" method="POST" className="space-y-6">
+              <input type="hidden" name="_redirect" value="/" />
               <input type="hidden" name="_email.subject" value="New Wedding Enquiry from Claire Creates Moments" />
               <input type="hidden" name="_email.from" value="Claire Creates Moments Website" />
 
