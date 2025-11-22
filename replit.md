@@ -12,6 +12,14 @@ A Next.js 14 wedding celebrant website featuring a modern, elegant design with d
 
 ## Recent Changes
 
+### November 22, 2025 - Vimeo Intro Video Integration
+- Added introduction video to "Meet Claire" section
+- Video hosted on Vimeo (video ID: 1139631322)
+- Embedded using responsive iframe with 16:9 aspect ratio
+- Styled with pink/gold gradient border matching site theme
+- Video URL: https://vimeo.com/1139631322
+- Replaces previous placeholder text in about.tsx component
+
 ### November 22, 2025 - Brand Logo Integration
 - Integrated Claire Creates Moments brand logo (pink hourglass with heart design)
 - Logo stored in `public/logo.png` (5000x5000 transparent PNG)

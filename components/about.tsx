@@ -1,4 +1,4 @@
-import { Sparkles, Video } from "lucide-react"
+import { Sparkles } from "lucide-react"
 
 export function About() {
   return (
@@ -14,12 +14,17 @@ export function About() {
           </h2>
 
           <div className="space-y-8">
-            <div className="rounded-lg overflow-hidden border border-[#D6B85A]/20 bg-gradient-to-br from-[#FFB3C6]/15 to-[#FFD1DC]/15 p-12 md:p-16">
-              <div className="flex flex-col items-center justify-center text-center space-y-4">
-                <Video className="w-12 h-12 text-[#D6B85A]" strokeWidth={1.5} />
-                <p className="text-[#D6B85A] text-lg md:text-xl font-light">
-                  Video to be added after photoshoot on 1st Nov
-                </p>
+            <div className="rounded-lg overflow-hidden border-2 border-[#D6B85A]/30 bg-gradient-to-br from-[#FFB3C6]/15 to-[#FFD1DC]/15 p-2">
+              <div className="relative aspect-video bg-black rounded overflow-hidden">
+                <iframe
+                  src="https://player.vimeo.com/video/1139631322?badge=0&autopause=0&player_id=0&app_id=58479"
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Claire Creates Moments - Introduction"
+                ></iframe>
               </div>
             </div>
 
