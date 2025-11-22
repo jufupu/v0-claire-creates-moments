@@ -12,6 +12,14 @@ A Next.js 14 wedding celebrant website featuring a modern, elegant design with d
 
 ## Recent Changes
 
+### November 22, 2025 - Brand Logo Integration
+- Integrated Claire Creates Moments brand logo (pink hourglass with heart design)
+- Logo stored in `public/logo.png` (5000x5000 transparent PNG)
+- Hero section: Logo replaces text title while maintaining H1 tag for SEO with descriptive alt text
+- Footer section: Logo replaces text title with responsive sizing
+- Responsive sizing: Hero (300-500px), Footer (200-250px) based on screen size
+- Maintains accessibility with proper alt text and semantic HTML structure
+
 ### November 22, 2025 - Formspark Contact Form Integration
 - Switched from Web3Forms to Formspark (works with .replit.dev domains)
 - Form submits to: https://submit-form.com/TRUjK7Mrq
