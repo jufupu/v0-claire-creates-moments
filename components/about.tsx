@@ -14,7 +14,7 @@ export function About() {
           </h2>
 
           <div className="space-y-8">
-            <div className="relative aspect-video bg-black rounded-lg overflow-hidden border-2 border-[#FFB3C6]/40 shadow-lg shadow-[#FFB3C6]/20">
+            <div className="relative aspect-[9/16] bg-black rounded-lg overflow-hidden border-2 border-[#FFB3C6]/40 shadow-lg shadow-[#FFB3C6]/20 max-w-md mx-auto">
               <iframe
                 src="https://player.vimeo.com/video/1139631322?badge=0&autopause=0&player_id=0&app_id=58479"
                 className="absolute inset-0 w-full h-full"
